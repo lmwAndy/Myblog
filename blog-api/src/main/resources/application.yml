@@ -1,0 +1,32 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: mszlu_blog
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  redis: #redis整合
+    host: localhost
+    port: 6379
+  servlet:
+    multipart:
+    # 单个文件的最大值
+      max-file-size: 20MB
+      # 上传文件总的最大值
+      max-request-size: 2MB
+
+#数据库的配置
+
+
+
+#mybatis-plus
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      table-prefix: ms_
+
